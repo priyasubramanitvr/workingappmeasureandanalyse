@@ -1,0 +1,34 @@
+   
+<mat-card style="padding-left: 50px; width:700px; height: 380px">
+
+    <table><tr><mat-label style="font-size:40px; margin-bottom: 200px"><b>ANALYZE</b></mat-label> </tr> </table>
+    <br>
+    <br>
+    
+    <div class="container">
+      
+ <div class="input-group">
+   <textarea  name ="result" placeholder ="Result"[(ngModel)]="result" rows ="8" cols="20" maxheight="500" maxlength="8" style ="font-size:15px;">{{result}}</textarea>
+  
+   <span class ="input-group-addon"></span>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <textarea name="data" placeholder ="Data" [(ngModel)]="data" rows ="8" cols="50" maxheight="500" maxlength="100" style ="font-size:15px;"></textarea>
+    
+  
+</div>
+</div>
+<br>
+<br>
+<mat-card-actions>
+
+  <button mat-raised-button color="accent"style=" transform: translateX(365%),transform:translateY(200%);"type="submit"(click)="Analyse()">Send</button>
+ </mat-card-actions>
+
+  </mat-card>
+
+  
+
+
+      
+
+      

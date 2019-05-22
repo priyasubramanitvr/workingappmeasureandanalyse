@@ -1,0 +1,51 @@
+<mat-card>
+  <table> <tr> <mat-label style="font-size:40px; margin-bottom: 20px"><b>REGISTER</b></mat-label></tr>
+    </table>
+
+ 
+
+  <form (submit)="onSignup(signupForm)" #signupForm="ngForm">
+
+    <mat-form-field>
+      <input type="firstname" name="firstname" ngModel matInput placeholder="Firstname" #firstnameInput="ngModel" required>
+      <mat-error *ngIf="firstnameInput.invalid">Please enter a valid firstname.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="lastname" name="lastname" ngModel matInput placeholder="Lastname" #lastnameInput="ngModel" required>
+      <mat-error *ngIf="lastnameInput.invalid">Please enter a valid lastname.</mat-error>
+    </mat-form-field>
+
+<mat-form-field>
+  <input type="phonenumber" name="phonenumber" ngModel matInput placeholder="Phonenumber" #phonenumberInput="ngModel" required>
+  <mat-error *ngIf="phonenumberInput.invalid">Please enter a valid phonenumber.</mat-error>
+</mat-form-field>
+<br>
+
+<mat-form-field>
+  <input type="email" name="email" ngModel matInput placeholder="Email" #emailInput="ngModel" required>
+  <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
+</mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <input type="password" name="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required
+      [type]="hide ? 'password':'text'" />
+      <mat-icon matSuffix (click)="hide = !hide">
+        {{hide ? 'visibility' : 'visibility_off'}}
+      </mat-icon>
+      <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
+    </mat-form-field><br>
+    
+
+      <mat-card-actions>
+    <button mat-raised-button color="accent" type="submit">Signup</button>
+    <p>
+      <span class=" "><b>Have an account?</b>
+        <button mat-button routerLink="/login" class="divider">Login</button>
+        </span></p>
+        </mat-card-actions>
+
+
+  </form>
+</mat-card>

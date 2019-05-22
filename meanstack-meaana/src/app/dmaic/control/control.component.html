@@ -1,0 +1,34 @@
+<mat-card>
+        <table> <tr> <mat-label style="font-size:40px; margin-bottom: 20px"><b>CONTROL</b></mat-label></tr>
+          </table>
+      
+       <form (submit)="onControl(controlForm)" #controlForm="ngForm">
+
+
+      
+         <mat-form-field>
+                    <input type="Important topics" name="important topics" ngModel matInput placeholder="important topics" #importanttopicsInput="ngModel" required>
+                    <mat-error *ngIf="importanttopicsInput.invalid">Please enter a  importanttopics.</mat-error>
+                  </mat-form-field>
+
+                  <br>
+                  <mat-form-field>
+                    <input type="Feed Back" name="feedback" ngModel matInput placeholder="Feed Back" #feedbackInput="ngModel" required>
+                    <mat-error *ngIf="feedbackInput.invalid">Please enter a  feedback.</mat-error>
+                  </mat-form-field>
+                  <br> 
+                  <mat-form-field>
+                      <input type="Update Document" name="updatedocument" ngModel matInput placeholder="Update Document" #updatedocumentInput="ngModel" required>
+                      <mat-error *ngIf="updatedocumentInput.invalid">Please upolad a document.</mat-error>
+                    </mat-form-field>
+                    <br> 
+                  
+                  
+                  
+<mat-card-actions>
+          <button mat-raised-button color="accent" type="submit"(click)="onclick()">Submit</button>
+         </mat-card-actions>
+      
+      
+        </form>
+      </mat-card>

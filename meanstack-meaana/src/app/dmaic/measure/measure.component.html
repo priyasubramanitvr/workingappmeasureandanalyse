@@ -1,0 +1,42 @@
+
+<mat-card style="padding-left: 50px; width:700px; height: 380px">
+
+    <table><tr><mat-label style="font-size:40px; margin-bottom: 200px,padding-right=50px;"><b>MEASURE</b></mat-label> </tr> </table>
+    <div class="container">
+      <br>
+      <br>
+
+
+      <form (submit)="Measure(measureForm)" #measureForm="ngForm">
+
+     <div class ="input-group">
+
+          <textarea name="exp" [(ngModel)]='exp' placeholder ="Exposed metric" rows ="6" cols="21" style ="font-size:15px;"></textarea>
+          <span class ="input-group-addon"></span>
+      &nbsp;&nbsp;&nbsp;&nbsp; 
+   
+      <textarea name="pro" [(ngModel)]='pro' placeholder ="Proposed metric" rows ="6" cols="21" style ="font-size:15px;"></textarea>
+      &nbsp;
+    
+    <button mat-raised-button color ="primary" type="button"(click)='cal_sub()' style="margin:auto;">=</button>&nbsp;&nbsp;&nbsp;
+  
+    <textarea name="result" placeholder ="Gap"  [(ngModel)] ="result" rows ="6" cols="21" style ="font-size:15px;" >{{ result }}</textarea> &nbsp;
+
+</div>
+</form>
+</div>
+<br>
+<br>
+<br>
+ 
+  <mat-card-actions>
+    <button mat-raised-button color="accent"style=" transform: translateX(265%);" type="submit"(click)="Measure()">Submit</button><br><br>&nbsp;&nbsp;&nbsp;
+   <!---- <button mat-raised-button color="accent"style=" transform: translateX(365%),transform:translateY(200%);" type="submit"(click)="Measureone()">Send</button>-->
+   </mat-card-actions>
+  </mat-card>
+  
+  
+
+
+
+ 

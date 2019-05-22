@@ -1,0 +1,20 @@
+
+ mat-card{
+    padding-left: 80px; 
+    width:1000px;
+    height:800px;
+   }
+   
+  
+ 
+/*.hide{
+    display: none;
+}
+
+/* mat-table */
+mat-footer-row mat-footer-cell{
+    justify-content: center;
+    font-style: italic;
+}
+
+
